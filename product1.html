@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>SimHub compatible flag – Layer Garage</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Fixed header -->
+<header class="site-header">
+<nav class="navbar">
+<div class="logo">
+<img alt="Layer Garage logo" src="logo.png"/>
+</div>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a class="active" href="shop.html">Shop</a></li>
+<li><a href="index.html#about">About</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+<!-- Product details -->
+<main class="product-detail-container">
+<div class="product-detail">
+<div class="product-detail-image">
+<!-- Replace the src with your actual product image -->
+<img alt="SimHub compatible flag" src="https://cdn.shopify.com/s/files/1/0959/4224/6731/files/ChatGPTImageAug10_2025_03_29_27AM.png?v=1754789386"/>
+</div>
+<div class="product-detail-info">
+<h1>SimHub compatible flag</h1>
+<p class="price" id="price-display">400.00</p>
+<p class="availability" id="availability-display">In stock</p>
+<p class="description">No description available.</p>
+<div class="options"><label for="select-0">Color:</label><select class="variant-select" id="select-0"><option value="Black">Black</option><option value="Red">Red</option><option value="Navy">Navy</option></select><label for="select-1">Item material:</label><select class="variant-select" id="select-1"><option value="PLA">PLA</option><option value="PLA-CF">PLA-CF</option></select></div>
+<!-- Shopify Shop Pay button placeholder (update the store URL and variant ID) -->
+<shop-pay-button id="shop-pay-button" store-url="https://YOUR_STORE_URL" variants="53146973012299"></shop-pay-button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="site-footer">
+<p>© 2025 Layer Garage. All rights reserved.</p>
+</footer>
+<!-- Shopify Shop Pay loader script -->
+<script src="https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.pay-button.esm.js" type="module"></script><script>const variants = [
+  {
+    "id": "53146973012299",
+    "optionValues": [
+      "Black",
+      "PLA"
+    ],
+    "price": "400.00",
+    "quantity": 10
+  },
+  {
+    "id": "53146973045067",
+    "optionValues": [
+      "Black",
+      "PLA-CF"
+    ],
+    "price": "500.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146973077835",
+    "optionValues": [
+      "Red",
+      "PLA"
+    ],
+    "price": "400.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146973110603",
+    "optionValues": [
+      "Red",
+      "PLA-CF"
+    ],
+    "price": "500.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146973143371",
+    "optionValues": [
+      "Navy",
+      "PLA"
+    ],
+    "price": "400.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146973176139",
+    "optionValues": [
+      "Navy",
+      "PLA-CF"
+    ],
+    "price": "500.00",
+    "quantity": 0
+  }
+];
+
+function updateVariant() {
+  const selected = [];
+  document.querySelectorAll('.variant-select').forEach(sel => {
+    selected.push(sel.value);
+  });
+  let found = variants.find(v => {
+    if (!v.optionValues) return false;
+    if (v.optionValues.length !== selected.length) return false;
+    for (let i = 0; i < selected.length; i++) {
+      if (v.optionValues[i] !== selected[i]) return false;
+    }
+    return true;
+  });
+  if (found) {
+    document.getElementById('price-display').textContent = found.price;
+    document.getElementById('availability-display').textContent = (found.quantity > 0) ? 'In stock' : 'Out of stock';
+    const spb = document.getElementById('shop-pay-button');
+    spb.setAttribute('variants', found.id);
+  }
+}
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.variant-select').forEach(sel => {
+    sel.addEventListener('change', updateVariant);
+  });
+});
+</script>
+</body>
+</html>

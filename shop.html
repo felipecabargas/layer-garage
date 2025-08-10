@@ -1,57 +1,40 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shop – Layer Garage</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"/>
+<title>Shop – Layer Garage</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="navbar">
-      <div class="logo">
-        <img src="logo_full_color_transparent.svg" alt="Layer Garage logo">
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html" class="active">Shop</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main class="shop-container">
-    <h1>Shop</h1>
-    <div class="product-grid">
-      
-      <div class="product-card">
-        <div class="product-card-image">
-          <img src="https://cdn.shopify.com/s/files/1/0959/4224/6731/files/ChatGPTImageAug10_2025_03_29_27AM.png?v=1754789386" alt="SimHub compatible flag">
-        </div>
-        <div class="product-card-info">
-          <h2>SimHub compatible flag</h2>
-          <p class="price">400.00</p>
-          <a href="simhub-compatible-flag.html" class="btn">View details</a>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-card-image">
-          <img src="https://cdn.shopify.com/s/files/1/0959/4224/6731/files/ChatGPTImageAug10_2025_03_10_25AM.png?v=1754788239" alt="Wheel Mount">
-        </div>
-        <div class="product-card-info">
-          <h2>Wheel Mount</h2>
-          <p class="price">100.00</p>
-          <a href="wheel-mount.html" class="btn">View details</a>
-        </div>
-      </div>
-    </div>
-  </main>
-  <footer class="site-footer">
-    <div class="footer-logo">
-      <img src="logo_full_color_transparent.svg" alt="Layer Garage logo">
-    </div>
-    <p>&copy; 2025 Layer Garage. All rights reserved.</p>
-  </footer>
+<!-- Fixed header -->
+<header class="site-header">
+<nav class="navbar">
+<div class="logo">
+<img alt="Layer Garage logo" src="logo.png"/>
+</div>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a class="active" href="shop.html">Shop</a></li>
+<li><a href="index.html#about">About</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+<!-- Main content for shop page -->
+<main class="shop-container">
+<h1>Our Products</h1>
+<p class="shop-description">Browse our collection of sim racing accessories. More items coming soon.</p>
+<div class="products-grid"><div class="product-card"><div class="product-image"><img alt="SimHub compatible flag" src="https://cdn.shopify.com/s/files/1/0959/4224/6731/files/ChatGPTImageAug10_2025_03_29_27AM.png?v=1754789386"/></div><h3>SimHub compatible flag</h3><p> </p><p class="price">400.00</p><a class="btn" href="product1.html">View details</a><shop-pay-button store-url="https://YOUR_STORE_URL" variants="53146973012299"></shop-pay-button></div><div class="product-card"><div class="product-image"><img alt="Wheel Mount" src="https://cdn.shopify.com/s/files/1/0959/4224/6731/files/ChatGPTImageAug10_2025_03_10_25AM.png?v=1754788239"/></div><h3>Wheel Mount</h3><p> </p><p class="price">100.00</p><a class="btn" href="product2.html">View details</a><shop-pay-button store-url="https://YOUR_STORE_URL" variants="53146826801483"></shop-pay-button></div></div>
+</main>
+<!-- Footer -->
+<footer class="site-footer">
+<p>© 2025 Layer Garage. All rights reserved.</p>
+</footer>
+<!-- Shopify Shop Pay loader script.
+       This script loads the Shop Pay web component. It should be included
+       once per page where you place <shop-pay-button> elements. -->
+<script src="https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.pay-button.esm.js" type="module"></script>
 </body>
 </html>

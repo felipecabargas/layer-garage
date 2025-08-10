@@ -1,72 +1,51 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Wheel Mount – Layer Garage</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../styles.css">
+<meta charset="utf-8"/>
+<title>Wheel Mount – Layer Garage</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="navbar">
-      <div class="logo">
-        <img src="../logo_full_color_transparent.svg" alt="Layer Garage logo">
-      </div>
-      <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../shop.html" class="active">Shop</a></li>
-        <li><a href="../index.html#about">About</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main class="product-detail-container">
-    <div class="product-detail">
-      <div class="product-detail-image">
-        <img src="https://cdn.shopify.com/s/files/1/0959/4224/6731/files/ChatGPTImageAug10_2025_03_10_25AM.png?v=1754788239" alt="Wheel Mount">
-      </div>
-      <div class="product-detail-info">
-        <h1>Wheel Mount</h1>
-        <p class="price" id="price-display">100.00</p>
-        <p class="availability" id="availability-display">Out of stock</p>
-        <div class="option-select"><label for="select-0">Manufacturer type:</label>
-<select id="select-0" class="variant-select">
-  <option value="Moza">Moza</option>
-  <option value="Asetek">Asetek</option>
-  <option value="Fanatec">Fanatec</option>
-  <option value="Thrustmaster">Thrustmaster</option>
-</select></div>
-<div class="option-select"><label for="select-1">Color:</label>
-<select id="select-1" class="variant-select">
-  <option value="Pink">Pink</option>
-  <option value="Clear">Clear</option>
-  <option value="Gray">Gray</option>
-  <option value="Navy">Navy</option>
-  <option value="Red">Red</option>
-  <option value="Black">Black</option>
-</select></div>
-<div class="option-select"><label for="select-2">Item material:</label>
-<select id="select-2" class="variant-select">
-  <option value="PLA">PLA</option>
-  <option value="PLA-CF">PLA-CF</option>
-</select></div>
-        <p class="description"><p><meta charset="utf-8"><span>Wall/sim mounts for your wheels </span></p></p>
-        <!-- Shop Pay button with dynamic variant binding -->
-        <shop-pay-button id="shop-pay-button" store-url="https://YOUR_STORE_URL" variants="53146826801483"></shop-pay-button>
-      </div>
-    </div>
-  </main>
-  <footer class="site-footer">
-    <div class="footer-logo">
-      <img src="../logo_full_color_transparent.svg" alt="Layer Garage logo">
-    </div>
-    <p>&copy; 2025 Layer Garage. All rights reserved.</p>
-  </footer>
-  <!-- Load Shopify Shop Pay script -->
-  <script type="module" src="https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.pay-button.esm.js"></script>
-  <script>
-    // Variant mapping for dynamic selection
-    const variants = [
+<!-- Fixed header -->
+<header class="site-header">
+<nav class="navbar">
+<div class="logo">
+<img alt="Layer Garage logo" src="logo.png"/>
+</div>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a class="active" href="shop.html">Shop</a></li>
+<li><a href="index.html#about">About</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+<!-- Product details -->
+<main class="product-detail-container">
+<div class="product-detail">
+<div class="product-detail-image">
+<!-- Replace the src with your actual product image -->
+<img alt="Wheel Mount" src="https://cdn.shopify.com/s/files/1/0959/4224/6731/files/ChatGPTImageAug10_2025_03_10_25AM.png?v=1754788239"/>
+</div>
+<div class="product-detail-info">
+<h1>Wheel Mount</h1>
+<p class="price" id="price-display">100.00</p>
+<p class="availability" id="availability-display">Out of stock</p>
+<p class="description">Wall/sim mounts for your wheels</p>
+<div class="options"><label for="select-0">Manufacturer type:</label><select class="variant-select" id="select-0"><option value="Moza">Moza</option><option value="Asetek">Asetek</option><option value="Fanatec">Fanatec</option><option value="Thrustmaster">Thrustmaster</option></select><label for="select-1">Color:</label><select class="variant-select" id="select-1"><option value="Pink">Pink</option><option value="Clear">Clear</option><option value="Gray">Gray</option><option value="Navy">Navy</option><option value="Red">Red</option><option value="Black">Black</option></select><label for="select-2">Item material:</label><select class="variant-select" id="select-2"><option value="PLA">PLA</option><option value="PLA-CF">PLA-CF</option></select></div>
+<!-- Shopify Shop Pay button placeholder (update the store URL and variant ID) -->
+<shop-pay-button id="shop-pay-button" store-url="https://YOUR_STORE_URL" variants="53146826801483"></shop-pay-button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="site-footer">
+<p>© 2025 Layer Garage. All rights reserved.</p>
+</footer>
+<!-- Shopify Shop Pay loader script -->
+<script src="https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.pay-button.esm.js" type="module"></script><script>const variants = [
   {
     "id": "53146826801483",
     "optionValues": [
@@ -548,35 +527,32 @@
     "quantity": 0
   }
 ];
-    function updateVariant() {
-      const selected = [];
-      document.querySelectorAll('.variant-select').forEach(sel => {
-        selected.push(sel.value);
-      });
-      // Find variant that matches selected values
-      let found = variants.find(v => {
-        if (!v.optionValues) return false;
-        if (v.optionValues.length !== selected.length) return false;
-        for (let i = 0; i < selected.length; i++) {
-          if (v.optionValues[i] !== selected[i]) return false;
-        }
-        return true;
-      });
-      if (found) {
-        // Update price and availability
-        document.getElementById('price-display').textContent = found.price;
-        document.getElementById('availability-display').textContent = (found.quantity > 0) ? 'In stock' : 'Out of stock';
-        // Update Shop Pay button variant attribute
-        const spb = document.getElementById('shop-pay-button');
-        spb.setAttribute('variants', found.id);
-      }
+
+function updateVariant() {
+  const selected = [];
+  document.querySelectorAll('.variant-select').forEach(sel => {
+    selected.push(sel.value);
+  });
+  let found = variants.find(v => {
+    if (!v.optionValues) return false;
+    if (v.optionValues.length !== selected.length) return false;
+    for (let i = 0; i < selected.length; i++) {
+      if (v.optionValues[i] !== selected[i]) return false;
     }
-    // Attach change listeners
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.variant-select').forEach(sel => {
-        sel.addEventListener('change', updateVariant);
-      });
-    });
-  </script>
+    return true;
+  });
+  if (found) {
+    document.getElementById('price-display').textContent = found.price;
+    document.getElementById('availability-display').textContent = (found.quantity > 0) ? 'In stock' : 'Out of stock';
+    const spb = document.getElementById('shop-pay-button');
+    spb.setAttribute('variants', found.id);
+  }
+}
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.variant-select').forEach(sel => {
+    sel.addEventListener('change', updateVariant);
+  });
+});
+</script>
 </body>
 </html>
