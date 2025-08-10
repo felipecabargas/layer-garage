@@ -37,7 +37,8 @@ a:hover {
 }
 
 .navbar .logo img {
-  height: 40px;
+  /* Enlarged logo size to improve visibility */
+  height: 60px;
 }
 
 .nav-links {
@@ -254,7 +255,8 @@ section h2 {
 }
 
 .site-footer .footer-logo img {
-  height: 32px;
+  /* Larger footer logo for better prominence */
+  height: 48px;
   margin-bottom: 0.5rem;
 }
 
