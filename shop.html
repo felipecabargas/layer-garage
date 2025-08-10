@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop – Layer Garage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Fixed header -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Layer Garage logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Main content for shop page -->
+  <main class="shop-container">
+    <h1>Our Products</h1>
+    <p class="shop-description">Browse our collection of sim racing accessories. More items coming soon.</p>
+    <div class="products-grid">
+      <!-- Product card template. Duplicate these divs for each product -->
+      <!--
+        Each product card below includes a placeholder for the Shopify Shop Pay button.
+        To activate Shop Pay on your site:
+          1. Sign up for a Shopify account (the Starter plan is sufficient) and create a product for each item you intend to sell.
+          2. Retrieve the product’s variant ID from the Shopify admin.
+          3. Replace YOUR_STORE_URL with your Shopify store URL (e.g., https://your-store.myshopify.com) and VARIANT_ID with the corresponding variant ID.
+        The embedded Shop Pay button will direct customers to a secure checkout hosted by Shopify.
+      -->
+      <div class="product-card">
+        <div class="product-image"></div>
+        <h3>Product Title&nbsp;1</h3>
+        <p>Brief description of the product. Replace this text with your own.</p>
+        <p class="price">$&mdash;</p>
+        <a href="product1.html" class="btn">View details</a>
+        <!-- Shopify Shop Pay button placeholder (update the store URL and variant ID) -->
+        <shop-pay-button store-url="https://YOUR_STORE_URL" variants="VARIANT_ID"></shop-pay-button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"></div>
+        <h3>Product Title&nbsp;2</h3>
+        <p>Brief description of the product. Replace this text with your own.</p>
+        <p class="price">$&mdash;</p>
+        <a href="product2.html" class="btn">View details</a>
+        <!-- Shopify Shop Pay button placeholder (update the store URL and variant ID) -->
+        <shop-pay-button store-url="https://YOUR_STORE_URL" variants="VARIANT_ID"></shop-pay-button>
+      </div>
+      <div class="product-card">
+        <div class="product-image"></div>
+        <h3>Product Title&nbsp;3</h3>
+        <p>Brief description of the product. Replace this text with your own.</p>
+        <p class="price">$&mdash;</p>
+        <a href="product3.html" class="btn">View details</a>
+        <!-- Shopify Shop Pay button placeholder (update the store URL and variant ID) -->
+        <shop-pay-button store-url="https://YOUR_STORE_URL" variants="VARIANT_ID"></shop-pay-button>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Layer Garage. All rights reserved.</p>
+  </footer>
+
+  <!-- Shopify Shop Pay loader script.
+       This script loads the Shop Pay web component. It should be included
+       once per page where you place <shop-pay-button> elements. -->
+  <script src="https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.pay-button.esm.js" type="module"></script>
+</body>
+</html>
