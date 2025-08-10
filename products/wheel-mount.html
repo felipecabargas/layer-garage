@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wheel Mount – Layer Garage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../logo_full_color_transparent.svg" alt="Layer Garage logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../shop.html" class="active">Shop</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="product-detail-container">
+    <div class="product-detail">
+      <div class="product-detail-image">
+        <img src="https://cdn.shopify.com/s/files/1/0959/4224/6731/files/ChatGPTImageAug10_2025_03_10_25AM.png?v=1754788239" alt="Wheel Mount">
+      </div>
+      <div class="product-detail-info">
+        <h1>Wheel Mount</h1>
+        <p class="price" id="price-display">100.00</p>
+        <p class="availability" id="availability-display">Out of stock</p>
+        <div class="option-select"><label for="select-0">Manufacturer type:</label>
+<select id="select-0" class="variant-select">
+  <option value="Moza">Moza</option>
+  <option value="Asetek">Asetek</option>
+  <option value="Fanatec">Fanatec</option>
+  <option value="Thrustmaster">Thrustmaster</option>
+</select></div>
+<div class="option-select"><label for="select-1">Color:</label>
+<select id="select-1" class="variant-select">
+  <option value="Pink">Pink</option>
+  <option value="Clear">Clear</option>
+  <option value="Gray">Gray</option>
+  <option value="Navy">Navy</option>
+  <option value="Red">Red</option>
+  <option value="Black">Black</option>
+</select></div>
+<div class="option-select"><label for="select-2">Item material:</label>
+<select id="select-2" class="variant-select">
+  <option value="PLA">PLA</option>
+  <option value="PLA-CF">PLA-CF</option>
+</select></div>
+        <p class="description"><p><meta charset="utf-8"><span>Wall/sim mounts for your wheels </span></p></p>
+        <!-- Shop Pay button with dynamic variant binding -->
+        <shop-pay-button id="shop-pay-button" store-url="https://YOUR_STORE_URL" variants="53146826801483"></shop-pay-button>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-logo">
+      <img src="../logo_full_color_transparent.svg" alt="Layer Garage logo">
+    </div>
+    <p>&copy; 2025 Layer Garage. All rights reserved.</p>
+  </footer>
+  <!-- Load Shopify Shop Pay script -->
+  <script type="module" src="https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.pay-button.esm.js"></script>
+  <script>
+    // Variant mapping for dynamic selection
+    const variants = [
+  {
+    "id": "53146826801483",
+    "optionValues": [
+      "Moza",
+      "Pink",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146826834251",
+    "optionValues": [
+      "Moza",
+      "Pink",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146826867019",
+    "optionValues": [
+      "Moza",
+      "Clear",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146826899787",
+    "optionValues": [
+      "Moza",
+      "Clear",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146826932555",
+    "optionValues": [
+      "Moza",
+      "Gray",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146826965323",
+    "optionValues": [
+      "Moza",
+      "Gray",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146826998091",
+    "optionValues": [
+      "Moza",
+      "Navy",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827030859",
+    "optionValues": [
+      "Moza",
+      "Navy",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827063627",
+    "optionValues": [
+      "Moza",
+      "Red",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827096395",
+    "optionValues": [
+      "Moza",
+      "Red",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827129163",
+    "optionValues": [
+      "Moza",
+      "Black",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827161931",
+    "optionValues": [
+      "Moza",
+      "Black",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827194699",
+    "optionValues": [
+      "Asetek",
+      "Pink",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827227467",
+    "optionValues": [
+      "Asetek",
+      "Pink",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827260235",
+    "optionValues": [
+      "Asetek",
+      "Clear",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827293003",
+    "optionValues": [
+      "Asetek",
+      "Clear",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827325771",
+    "optionValues": [
+      "Asetek",
+      "Gray",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827358539",
+    "optionValues": [
+      "Asetek",
+      "Gray",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827391307",
+    "optionValues": [
+      "Asetek",
+      "Navy",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827424075",
+    "optionValues": [
+      "Asetek",
+      "Navy",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827456843",
+    "optionValues": [
+      "Asetek",
+      "Red",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827489611",
+    "optionValues": [
+      "Asetek",
+      "Red",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827522379",
+    "optionValues": [
+      "Asetek",
+      "Black",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827555147",
+    "optionValues": [
+      "Asetek",
+      "Black",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827587915",
+    "optionValues": [
+      "Fanatec",
+      "Pink",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827620683",
+    "optionValues": [
+      "Fanatec",
+      "Pink",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827653451",
+    "optionValues": [
+      "Fanatec",
+      "Clear",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827686219",
+    "optionValues": [
+      "Fanatec",
+      "Clear",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827718987",
+    "optionValues": [
+      "Fanatec",
+      "Gray",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827751755",
+    "optionValues": [
+      "Fanatec",
+      "Gray",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827784523",
+    "optionValues": [
+      "Fanatec",
+      "Navy",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827817291",
+    "optionValues": [
+      "Fanatec",
+      "Navy",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827850059",
+    "optionValues": [
+      "Fanatec",
+      "Red",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827882827",
+    "optionValues": [
+      "Fanatec",
+      "Red",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827915595",
+    "optionValues": [
+      "Fanatec",
+      "Black",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827948363",
+    "optionValues": [
+      "Fanatec",
+      "Black",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146827981131",
+    "optionValues": [
+      "Thrustmaster",
+      "Pink",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146828013899",
+    "optionValues": [
+      "Thrustmaster",
+      "Pink",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146828046667",
+    "optionValues": [
+      "Thrustmaster",
+      "Clear",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146828079435",
+    "optionValues": [
+      "Thrustmaster",
+      "Clear",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146828112203",
+    "optionValues": [
+      "Thrustmaster",
+      "Gray",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146828144971",
+    "optionValues": [
+      "Thrustmaster",
+      "Gray",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146828177739",
+    "optionValues": [
+      "Thrustmaster",
+      "Navy",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146828210507",
+    "optionValues": [
+      "Thrustmaster",
+      "Navy",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146828243275",
+    "optionValues": [
+      "Thrustmaster",
+      "Red",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146828276043",
+    "optionValues": [
+      "Thrustmaster",
+      "Red",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146828308811",
+    "optionValues": [
+      "Thrustmaster",
+      "Black",
+      "PLA"
+    ],
+    "price": "100.00",
+    "quantity": 0
+  },
+  {
+    "id": "53146828341579",
+    "optionValues": [
+      "Thrustmaster",
+      "Black",
+      "PLA-CF"
+    ],
+    "price": "150.00",
+    "quantity": 0
+  }
+];
+    function updateVariant() {
+      const selected = [];
+      document.querySelectorAll('.variant-select').forEach(sel => {
+        selected.push(sel.value);
+      });
+      // Find variant that matches selected values
+      let found = variants.find(v => {
+        if (!v.optionValues) return false;
+        if (v.optionValues.length !== selected.length) return false;
+        for (let i = 0; i < selected.length; i++) {
+          if (v.optionValues[i] !== selected[i]) return false;
+        }
+        return true;
+      });
+      if (found) {
+        // Update price and availability
+        document.getElementById('price-display').textContent = found.price;
+        document.getElementById('availability-display').textContent = (found.quantity > 0) ? 'In stock' : 'Out of stock';
+        // Update Shop Pay button variant attribute
+        const spb = document.getElementById('shop-pay-button');
+        spb.setAttribute('variants', found.id);
+      }
+    }
+    // Attach change listeners
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.variant-select').forEach(sel => {
+        sel.addEventListener('change', updateVariant);
+      });
+    });
+  </script>
+</body>
+</html>
